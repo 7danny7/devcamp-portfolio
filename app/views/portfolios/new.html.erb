@@ -18,6 +18,12 @@
     <%= form.text_area :body %>
   </div>
 
+  def new
+    @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
+  end
+
+
   <div>
     <%= form.submit %>
   </div>
